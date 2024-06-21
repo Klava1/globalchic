@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './FutureEvents.css';
-import { data, topPicksData } from "./data.js";
+import { data } from "./data.js";
 
 
 function FutureEvents({ futureEvents = data }) {

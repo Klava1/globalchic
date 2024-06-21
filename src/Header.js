@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logoBC from "./images/logobc.jpg";
 import './Header.css';
 

@@ -4,7 +4,7 @@ import BackToGlobal from "./BackToGlobal";
 import FutureEvents from "./FututreEvents";
 import SpecialEvent from "./SpecialEvent";
 import TopPicks from "./TopPicks";
-import { data, topPicksData } from "./data.js";
+import { data } from "./data.js";
 import eventImage1 from './images/events/whiteParty.jpg'; // Replace with actual paths
 
 
