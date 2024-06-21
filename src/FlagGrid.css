@@ -1,0 +1,40 @@
+.flag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    background-color: #d4ccb9;
+  }
+  
+  .flag-item {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e0dbcf;
+  }
+  
+  .flag-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .flag-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .flag-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .flag-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  

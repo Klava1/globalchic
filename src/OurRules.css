@@ -1,0 +1,52 @@
+.our-rules {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4ecdd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .intro-rule{
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: justify;
+    color: #7f7f7f;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+  }
+  
+  .rule {
+    margin-bottom: 40px;
+  }
+  
+  .rule h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #555;
+    text-align: center;
+
+  }
+  
+  .rule p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    color: #7f7f7f;
+  }
+  
+  .rule ul {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+    list-style: none;
+    color: #7f7f7f;
+  }
+

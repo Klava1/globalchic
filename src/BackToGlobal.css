@@ -1,0 +1,26 @@
+.back-to-global-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .back-to-global-button {
+    background-color: #587a89; 
+    border: none;
+    color: white;
+    padding: 15px 50px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .back-to-global-button:hover {
+    background-color: #384e58; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
