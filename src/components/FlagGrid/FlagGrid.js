@@ -1,22 +1,22 @@
 import React from "react";
-import './FlagGrid.css';
 import { Link } from "react-router-dom";
-import uaeFlag from "./images/flags/ae.png";
-import austriaFlag from "./images/flags/at.png";
-import swissFlag from "./images/flags/ch.png";
-import cyprusFlag from "./images/flags/cy.png";
-import germanyFlag from "./images/flags/de.png";
-import spainFlag from "./images/flags/es.png";
-import franceFlag from "./images/flags/fr.png";
-import gbFlag from "./images/flags/gb.png";
-import israelFlag from "./images/flags/il.png";
-import italyFlag from "./images/flags/it.png";
-import lithuaniaFlag from "./images/flags/lt.png";
-import latviaFlag from "./images/flags/lv.png";
-import netherlandsFlag from "./images/flags/nl.png";
-import portugalFlag from "./images/flags/pt.png";
-import turkeyFlag from "./images/flags/tr.png";
-import usaFlag from "./images/flags/us.png";
+import './FlagGrid.css';
+import uaeFlag from "../../images/flags/ae.png";
+import austriaFlag from "../../images/flags/at.png";
+import swissFlag from "../../images/flags/ch.png";
+import cyprusFlag from "../../images/flags/cy.png";
+import germanyFlag from "../../images/flags/de.png";
+import spainFlag from "../../images/flags/es.png";
+import franceFlag from "../../images/flags/fr.png";
+import gbFlag from "../../images/flags/gb.png";
+import israelFlag from "../../images/flags/il.png";
+import italyFlag from "../../images/flags/it.png";
+import lithuaniaFlag from "../../images/flags/lt.png";
+import latviaFlag from "../../images/flags/lv.png";
+import netherlandsFlag from "../../images/flags/nl.png";
+import portugalFlag from "../../images/flags/pt.png";
+import turkeyFlag from "../../images/flags/tr.png";
+import usaFlag from "../../images/flags/us.png";
 
 const flags = [
     { src: franceFlag, country: "France", name: "France" },

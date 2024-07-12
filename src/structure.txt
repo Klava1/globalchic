@@ -1,0 +1,35 @@
+src/
+├── assets/
+│   ├── images/
+│   └── styles/
+│       └── App.css
+|       └── AboutProject.css
+|       └── AllOtherComponentsAndPages.css //css for all other components and pages
+├── components/
+│   ├── Basket.js
+│   ├── ButtonToGlobal.js
+│   ├── ButtonsToSortEvents.js
+│   ├── CountryEvents.js
+│   ├── EventCard.js
+│   ├── GlobalEventCard.js
+│   ├── Header.js
+│   ├── Footer.js
+│   └── Navigation.js
+├── pages/
+│   ├── AboutProject.js  //description only
+│   ├── AdvertisingBusinessPartners.js    //description only
+│   ├── AssociateMembers.js   //description only
+│   ├── B2BCommunity.js    //description only
+│   ├── Contact.js    //description + form
+│   ├── Events.js   // sorted by country
+│   ├── Membership.js    //description only
+│   ├── MemberPartners.js     //description only
+│   ├── Rules.js     //description only
+│   ├── Sponsorship.js     //description only
+│   └── Vacancies.js     //description only
+├── redux/
+│   ├── store.js
+│   ├── counter.js
+├── App.js // list of countries -- buttons to navigate to certain country
+├── index.js
+└── routes.js

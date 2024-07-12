@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logoBC from "./images/logobc.jpg";
 import './Header.css';
+import logoBC from "../../images/logobc.jpg";
 
 function Header({ isHomePage, homeLogo }) {
   return (

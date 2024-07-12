@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './TopPicks.css';
-import topPick1 from './images/events/topPick1.jpg'; // Replace with the actual paths to your images
-import topPick2 from './images/events/topPick2.jpg';
-import topPick3 from './images/events/topPick3.jpg';
+import topPick1 from '../../images/events/topPick1.jpg'; // Replace with the actual paths to your images
+import topPick2 from '../../images/events/topPick2.jpg';
+import topPick3 from '../../images/events/topPick3.jpg';
 
 const topPicksData = [
   {

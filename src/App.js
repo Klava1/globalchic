@@ -1,17 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
 import "./App.css";
-import Header from "./Header";
-import Footer from "./Footer";
-import FlagGrid from "./FlagGrid";
-import MainPage from "./MainPage";
-import AboutUs from "./AboutUs";
-import OurRules from "./OurRules";
-import ContactUs from "./ContactUs";
-import AnnualEvents from "./AnnualEvents";
-import OurVacancies from "./OurVacancies";
+import AboutUs from "./components/AboutUs/AboutUs";
+import AnnualEvents from "./components/AnnualEvents/AnnualEvents";
+import ContactUs from "./components/ContactUs/ContactUs";
+import FlagGrid from "./components/FlagGrid/FlagGrid";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import MainPage from "./components/MainPage";
+import OurRules from "./components/OurRules/OurRules";
+import OurVacancies from "./components/OurVacancies/OurVacancies";
 import logoGC from "./images/logogc-nobg.png";
 // import AddEvent from "./AddEvent";
+
 
 function AppContent() {
   const location = useLocation();

@@ -76,7 +76,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Made with love by Klava
+          Made by Klava
         </a>
       </div>
     </footer>

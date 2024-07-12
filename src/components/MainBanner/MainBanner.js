@@ -1,4 +1,4 @@
-import mainBanner from "./images/main-banner.jpg";
+import mainBanner from "../../images/main-banner.jpg";
 import "./MainBanner.css";
 
 function MainBanner() {

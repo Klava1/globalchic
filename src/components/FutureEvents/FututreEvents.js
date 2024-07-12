@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './FutureEvents.css';
-import { data } from "./data.js";
-
+import {data} from '../../data.js';
 
 function FutureEvents({ futureEvents = data }) {
   const [showMoreEvents, setShowMoreEvents] = useState(4);

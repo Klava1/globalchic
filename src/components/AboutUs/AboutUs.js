@@ -1,8 +1,8 @@
 import React from 'react';
 import './AboutUs.css';
-import alexanderPhoto from './images/people/alexander.jpg';
-import marinaPhoto from './images/people/marina.jpg';
-import annaPhoto from './images/people/anna.jpg';
+import alexanderPhoto from '../../images/people/alexander.jpg';
+import marinaPhoto from '../../images/people/marina.jpg';
+import annaPhoto from '../../images/people/anna.jpg';
 
 function AboutUs() {
   return (
