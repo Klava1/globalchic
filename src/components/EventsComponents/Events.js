@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Events.css";
 import { data } from "../../data.js";
 
-function FutureEvents({ futureEvents = data }) {
+function Events({ events = data }) {
   const [showMoreEvents, setShowMoreEvents] = useState(4);
 
   const handleShowMoreEvents = () => {
@@ -13,7 +13,7 @@ function FutureEvents({ futureEvents = data }) {
     <section>
       <h2 className="section-title">Events</h2>
       <div className="events-grid">
-        {futureEvents.slice(0, showMoreEvents).map((element) => {
+        {events.slice(0, showMoreEvents).map((element) => {
           const { id, eventImage, eventDate, eventName, eventPrice } = element;
           return (
             <div
@@ -22,7 +22,7 @@ function FutureEvents({ futureEvents = data }) {
             >
               <img
                 src={eventImage}
-                alt="futureEvent"
+                alt="event"
                 className="future-event-image"
               />
               <div className="event-details">
@@ -30,14 +30,15 @@ function FutureEvents({ futureEvents = data }) {
                 <h2 className="event-name">{eventName}</h2>
                 <h3 className="event-price">{eventPrice}</h3>
                 <button>How many people are coming?</button>
-                <button className = "event-add-to-cart">Add tickets to cart</button>
-
+                <button className="event-add-to-cart">
+                  Add tickets to cart
+                </button>
               </div>
             </div>
           );
         })}
       </div>
-      {showMoreEvents < futureEvents.length && (
+      {showMoreEvents < events.length && (
         <button
           className="show-more-events"
           onClick={handleShowMoreEvents}
@@ -49,4 +50,4 @@ function FutureEvents({ futureEvents = data }) {
   );
 }
 
-export default FutureEvents;
+export default Events;

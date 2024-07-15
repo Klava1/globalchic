@@ -1,7 +1,36 @@
 .categoryButton {
-  background-color: #fdeb6b;
+  background-color: #fce3ba;
+  color: #f15c2f;
+  border: 2px solid #f15c2f;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 16px;
+}
+
+.categoryButton:hover {
+  background-color: #f15c2f;
+  color: #fce3ba;
+  transform: scale(1.05);
 }
 
 .categoryButtonSelected {
-  background-color: green;
+  background-color: #f15c2f;
+  color: #ffffff;
+  border: 2px solid #f15c2f;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  transform: scale(1.1);
 }

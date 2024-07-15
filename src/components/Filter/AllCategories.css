@@ -1,0 +1,22 @@
+.container-all-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+  padding: 20px;
+  background-color: #f9e4c3;
+}
+
+.all-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+h3 {
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
