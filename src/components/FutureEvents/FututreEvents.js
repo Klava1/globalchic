@@ -16,7 +16,7 @@ function FutureEvents({ futureEvents = data }) {
   };
 
   const filteredEvents = (type) => {
-    // Add filtering logic here if needed
+    // Add filtering logic here
   };
 
   return (

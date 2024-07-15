@@ -42,6 +42,12 @@ function Footer() {
                 <li>
                   <Link to="/ourVacancies">Our Vacancies</Link>
                 </li>
+                <li>
+                  <Link to="/adsAndPartnerships">Advertising and Partnerships</Link>
+                </li>
+                <li>
+                  <Link to="/sponsorship">Sponsorship</Link>
+                </li>
               </ul>
             </div>
             <div className="footer-section">

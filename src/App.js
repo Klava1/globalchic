@@ -1,5 +1,10 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes, useLocation } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import AboutUs from "./components/AboutUs/AboutUs";
 import AnnualEvents from "./components/AnnualEvents/AnnualEvents";
@@ -11,8 +16,11 @@ import MainPage from "./components/MainPage";
 import OurRules from "./components/OurRules/OurRules";
 import OurVacancies from "./components/OurVacancies/OurVacancies";
 import logoGC from "./images/logogc-nobg.png";
+import BToB from "./components/BToB/BToB";
+import Events from "./components/EventsComponents/Events";
+import AllCategories from "./components/Filter/AllCategories";
+import Cart from "./components/Cart/Cart";
 // import AddEvent from "./AddEvent";
-
 
 function AppContent() {
   const location = useLocation();
@@ -20,18 +28,48 @@ function AppContent() {
 
   return (
     <div className="App">
-      <Header isHomePage={isHomePage} homeLogo={logoGC} />
+      <Header
+        isHomePage={isHomePage}
+        homeLogo={logoGC}
+      />
       <Routes>
-        <Route path="/" element={<FlagGrid />} />
-        <Route path="/filtered-events/:country" element={<MainPage />} />
-        <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/ourRules" element={<OurRules />} />
-        <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/annualEvents" element={<AnnualEvents />} />
-        <Route path="/ourVacancies" element={<OurVacancies />} />
+        <Route
+          path="/"
+          element={<FlagGrid />}
+        />
+        <Route
+          path="/filtered-events/:country"
+          element={<MainPage />}
+        />
+        <Route
+          path="/aboutUs"
+          element={<AboutUs />}
+        />
+        <Route
+          path="/ourRules"
+          element={<OurRules />}
+        />
+        <Route
+          path="/contactUs"
+          element={<ContactUs />}
+        />
+        <Route
+          path="/annualEvents"
+          element={<AnnualEvents />}
+        />
+        <Route
+          path="/ourVacancies"
+          element={<OurVacancies />}
+        />
         {/* <Route path="/admin" element={<AddEvent />} /> */}
-
       </Routes>
+
+      <BToB />
+      <AllCategories />
+
+      <Events />
+      <Cart />
+
       <Footer />
     </div>
   );
