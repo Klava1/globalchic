@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const eventsSlice = createSlice({
   name: "events",
   initialState: {
-    selectedCategory: "Family",
+    selectedCategory: "family",
   },
   reducers: {
     filterCategory: (state, action) => {
@@ -13,5 +13,5 @@ export const eventsSlice = createSlice({
 });
 
 export const getSelectedCategory = (state) => state.events.selectedCategory;
-export default eventsSlice.reducer;
 export const { filterCategory } = eventsSlice.actions;
+export default eventsSlice.reducer;

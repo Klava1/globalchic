@@ -3,7 +3,7 @@ import Filter from "./Filter";
 import "./AllCategories.css";
 
 const AllCategories = () => {
-  const categories = ["Family", "Lecture", "Tour", "All"];
+  const categories = ["family", "lecture", "tour", "all"];
 
   return (
     <div className="container-all-filters">
