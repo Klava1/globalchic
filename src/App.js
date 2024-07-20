@@ -17,8 +17,6 @@ import OurRules from "./components/OurRules/OurRules";
 import OurVacancies from "./components/OurVacancies/OurVacancies";
 import logoGC from "./images/logogc-nobg.png";
 import BToB from "./components/BToB/BToB";
-import Events from "./components/EventsComponents/Events";
-import AllCategories from "./components/Filter/AllCategories";
 import Cart from "./components/Cart/Cart";
 // import AddEvent from "./AddEvent";
 
@@ -61,14 +59,14 @@ function AppContent() {
           path="/ourVacancies"
           element={<OurVacancies />}
         />
+        <Route
+          path="/checkOut"
+          element={<Cart />}
+        />
         {/* <Route path="/admin" element={<AddEvent />} /> */}
       </Routes>
 
       <BToB />
-      <AllCategories />
-
-      <Events />
-      <Cart />
 
       <Footer />
     </div>

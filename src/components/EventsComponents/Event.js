@@ -1,19 +1,37 @@
-import "./Event.css";
+import { useState } from "react";
+import ChangeQuantity from "../Cart/ChangeQuantity";
+import "./EventsComponents.css";
+import { addItemToCart } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
 
 const Event = ({ event }) => {
+  const [quantity, setQuantity] = useState(1);
   const { eventImage, eventDate, eventName, eventPrice } = event;
-
+  const dispatch = useDispatch();
   return (
-    <div className="event-card">
-      <img
-        src={eventImage}
-        alt="event"
-        className="future-event-image"
-      />
-      <div className="event-details">
-        <h3 className="event-date">{eventDate}</h3>
-        <h2 className="event-name">{eventName}</h2>
-        <h3 className="event-price">{eventPrice}</h3>
+    <div>
+      <div className="event-card">
+        <img
+          src={eventImage}
+          alt={eventName}
+          className="event-image"
+        />
+        <div className="event-details">
+          <h3 className="event-date">{eventDate}</h3>
+          <h2 className="event-name">{eventName}</h2>
+          <h3 className="event-price">£ {eventPrice}</h3>
+          <ChangeQuantity
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
+          <button
+            onClick={() => {
+              dispatch(addItemToCart({ event, quantity }));
+            }}
+          >
+            Add to cart
+          </button>
+        </div>
       </div>
     </div>
   );

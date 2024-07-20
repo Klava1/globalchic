@@ -1,36 +1,54 @@
+/* Filter Component */
 .categoryButton {
-  background-color: #fce3ba;
-  color: #f15c2f;
-  border: 2px solid #f15c2f;
-  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
   padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
   display: inline-block;
-  margin: 5px;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  font-size: 16px;
 }
 
 .categoryButton:hover {
-  background-color: #f15c2f;
-  color: #fce3ba;
-  transform: scale(1.05);
+  background-color: #000;
+  color: #fff;
 }
 
 .categoryButtonSelected {
-  background-color: #f15c2f;
-  color: #ffffff;
-  border: 2px solid #f15c2f;
-  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
   padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  margin: 0 10px;
   display: inline-block;
-  margin: 5px;
-  font-family: Arial, sans-serif;
+}
+
+/* AllCategories Component */
+.all-categories-container {
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 40px auto;
   text-align: center;
-  font-size: 16px;
-  transform: scale(1.1);
+}
+
+.all-categories-header {
+  font-size: 2em;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.categories-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }

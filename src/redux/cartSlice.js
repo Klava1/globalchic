@@ -12,7 +12,7 @@ export const cartSlice = createSlice({
         id: timeId,
         eventId: action.payload.event.id,
         quantity: action.payload.quantity,
-        totalPrice: action.payload.quantity * action.payload.event.price,
+        totalPrice: action.payload.quantity * action.payload.event.eventPrice,
       });
     },
     removeItemFromCart: (state, action) => {
@@ -20,15 +20,18 @@ export const cartSlice = createSlice({
         (cartItem) => cartItem.id !== action.payload.cartItemId
       );
     },
+    clearCart: (state, action) => {
+      state.cartItems = [];
+    },
   },
 });
 
 export const getTotalPrice = (state) => {
-  return state.cartSlice.cartItems.reduce((total, cartItems) => {
+  return state.cart.cartItems.reduce((total, cartItems) => {
     return cartItems.totalPrice + total;
   }, 0);
 };
-
-export const getCartItems = (state) => state.cartSlice.cartItems;
-export const { addItemToCart, removeItemFromCart } = cartSlice.actions;
+export const getCartItems = (state) => state.cart.cartItems;
+export const { addItemToCart, removeItemFromCart, clearCart } =
+  cartSlice.actions;
 export default cartSlice.reducer;

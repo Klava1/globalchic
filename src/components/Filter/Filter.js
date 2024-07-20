@@ -1,26 +1,24 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getSelectedCategory, filterCategory } from "../../redux/eventsSlice";
+import { filterCategory, getSelectedCategory } from "../../redux/eventsSlice";
 import "./Filter.css";
 
-const Filter = ({ category }) => {
-  const dispatch = useDispatch();
+const Filter = ({ eventCategory }) => {
   const selectedCategory = useSelector(getSelectedCategory);
-  console.log(selectedCategory);
+  const dispatch = useDispatch();
 
   return (
     <div>
       <p
         onClick={() => {
-          dispatch(filterCategory(category));
+          dispatch(filterCategory(eventCategory));
         }}
         className={
-          selectedCategory === category
+          selectedCategory === eventCategory
             ? "categoryButtonSelected"
             : "categoryButton"
         }
       >
-        {category}
+        {eventCategory}
       </p>
     </div>
   );

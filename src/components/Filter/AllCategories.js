@@ -1,18 +1,18 @@
-import React from "react";
 import Filter from "./Filter";
-import "./AllCategories.css";
+import "./Filter.css";
 
 const AllCategories = () => {
-  const categories = ["family", "lecture", "tour", "all"];
-
+  const categories = ["LECTURE", "FAMILY", "TOUR", "ALL"];
   return (
-    <div className="container-all-filters">
-      <h3>What kind of events are you looking for?</h3>
-      <div className="all-filters">
+    <div className="all-categories-container">
+      <h1 className="all-categories-header">
+        WHAT KIND OF AN EVENT ARE YOU LOOKING FOR?
+      </h1>
+      <div className="categories-list">
         {categories.map((category) => (
           <Filter
             key={category}
-            category={category}
+            eventCategory={category}
           />
         ))}
       </div>

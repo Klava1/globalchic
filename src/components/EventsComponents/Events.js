@@ -1,29 +1,27 @@
-import "./Events.css";
-import { getSelectedCategory } from "../../redux/eventsSlice";
 import { useSelector } from "react-redux";
+import dataEvents from "../../dataEvents";
 import Event from "./Event";
-import { data } from "../../data";
+import { getSelectedCategory } from "../../redux/eventsSlice";
+import "./EventsComponents.css";
 
-function Events({ events = data }) {
+const Events = () => {
   const selectedCategory = useSelector(getSelectedCategory);
 
   return (
-    <div className="events-container">
-      {data
+    <div className="events-grid">
+      {dataEvents
         .filter((event) => {
-          if (selectedCategory === "all") {
-            return true;
-          }
-          return selectedCategory === event.category;
+          if (selectedCategory === "ALL") return true;
+          return selectedCategory === event.eventCategory;
         })
-        .map((event) => (
+        .map((event, id) => (
           <Event
-            key={event.id}
+            key={id}
             event={event}
           />
         ))}
     </div>
   );
-}
+};
 
 export default Events;
