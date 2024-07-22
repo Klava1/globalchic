@@ -33,3 +33,5 @@ src/
 ├── App.js // list of countries -- buttons to navigate to certain country
 ├── index.js
 └── routes.js
+
+glitch in css? modal

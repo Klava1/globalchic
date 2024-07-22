@@ -3,6 +3,8 @@ import ChangeQuantity from "../Cart/ChangeQuantity";
 import "./EventsComponents.css";
 import { addItemToCart } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import Modal from "../Modal/Modal";
+import ModalContent from "../Modal/ModalContent";
 
 const Event = ({ event }) => {
   const [quantity, setQuantity] = useState(1);
@@ -18,7 +20,18 @@ const Event = ({ event }) => {
           alt={eventName}
           className="event-image"
         />
-        <button className="event-more-details">MORE DETAILS</button>
+        <button
+          className="event-more-details"
+          onClick={() => setIsOpen(true)}
+        >
+          MORE DETAILS
+        </button>
+        {isOpen && (
+          <Modal setIsOpen={setIsOpen}>
+            <ModalContent setIsOpen={setIsOpen} />
+          </Modal>
+        )}
+
         <div className="event-details">
           <h3 className="event-date">{eventDate}</h3>
           <h2 className="event-name">{eventName}</h2>
