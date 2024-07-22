@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #aa9174 ;
+  background-color: #aa9174;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -12,16 +12,25 @@
   align-items: center;
 }
 
-.logo {
+.logoBC {
+  margin-left: -180px;
+}
+
+.logoBC,
+.logoGC {
   height: 100px;
   width: auto;
-  padding-left: 40px;
-  
+  transition: transform 0.3s ease;
+}
+
+.logoBC:hover,
+.logoGC:hover {
+  transform: scale(1.1);
 }
 
 .nav {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   padding-right: 30px;
 }
 
@@ -31,17 +40,17 @@
   font-size: 16px;
   font-weight: 500;
   padding: 8px 16px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth movement */
   border-radius: 10px;
   background-color: #d4ccb9;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-
 }
 
 .nav-link:hover {
   color: white;
   background-color: rgb(55, 54, 54);
   border-radius: 10px;
+  transform: translateY(-3px);
 }
 
 .header.hide-logo .logo {

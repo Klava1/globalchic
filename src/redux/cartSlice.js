@@ -13,6 +13,7 @@ export const cartSlice = createSlice({
         eventId: action.payload.event.id,
         quantity: action.payload.quantity,
         totalPrice: action.payload.quantity * action.payload.event.eventPrice,
+        totalItems: action.payload.quantity,
       });
     },
     removeItemFromCart: (state, action) => {
@@ -20,11 +21,17 @@ export const cartSlice = createSlice({
         (cartItem) => cartItem.id !== action.payload.cartItemId
       );
     },
-    clearCart: (state, action) => {
+    clearCart: (state) => {
       state.cartItems = [];
     },
   },
 });
+
+export const getTotalItems = (state) => {
+  return state.cart.cartItems.reduce((total, cartItems) => {
+    return cartItems.totalItems + total;
+  }, 0);
+};
 
 export const getTotalPrice = (state) => {
   return state.cart.cartItems.reduce((total, cartItems) => {

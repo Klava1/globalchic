@@ -8,6 +8,8 @@ const Event = ({ event }) => {
   const [quantity, setQuantity] = useState(1);
   const { eventImage, eventDate, eventName, eventPrice } = event;
   const dispatch = useDispatch();
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
       <div className="event-card">
@@ -16,6 +18,7 @@ const Event = ({ event }) => {
           alt={eventName}
           className="event-image"
         />
+        <button className="event-more-details">MORE DETAILS</button>
         <div className="event-details">
           <h3 className="event-date">{eventDate}</h3>
           <h2 className="event-name">{eventName}</h2>

@@ -1,19 +1,35 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import logoBC from "../../images/logobc.jpg";
+import logoGC from "../../images/logogc-nobg.png";
+
 import PropTypes from "prop-types";
 
 function Header(props) {
-  const { isHomePage, homeLogo } = props;
+  const navigate = useNavigate();
+  const handleBackToGlobal = () => {
+    navigate("/");
+  };
   return (
     <header className="header">
+      <Link
+        to="/"
+        className="logo-link"
+      >
+        <img
+          src={logoGC}
+          className="logoGC"
+          alt="Global Chic Logo"
+          onClick={handleBackToGlobal}
+        />
+      </Link>
       <Link
         to="/filtered-events/:country"
         className="logo-link"
       >
         <img
-          src={isHomePage ? homeLogo : logoBC}
-          className="logo"
+          src={logoBC}
+          className="logoBC"
           alt="logoBC"
         />
       </Link>

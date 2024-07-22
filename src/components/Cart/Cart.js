@@ -1,11 +1,22 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CartItem from "./CartItem";
-import { getCartItems, getTotalPrice } from "../../redux/cartSlice";
+import {
+  clearCart,
+  getCartItems,
+  getTotalItems,
+  getTotalPrice,
+} from "../../redux/cartSlice";
 import "./Cart.css";
 
 const Cart = () => {
   const cartItems = useSelector(getCartItems);
   const totalPrice = useSelector(getTotalPrice);
+  const totalItems = useSelector(getTotalItems);
+  const dispatch = useDispatch();
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
+
   return (
     <div className="cart-container">
       <img
@@ -24,7 +35,9 @@ const Cart = () => {
           />
         ))}{" "}
       </div>
-      <button>REMOVE ALL ITEMS FROM THE CART</button>
+      <button onClick={handleClearCart}>
+        REMOVE ALL {totalItems} ITEMS FROM THE CART
+      </button>
       <div></div>
     </div>
   );
