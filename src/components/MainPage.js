@@ -1,10 +1,8 @@
 import React from "react";
 import BackToGlobal from "./BackToGlobal/BackToGlobal";
-import FutureEvents from "./FutureEvents/FututreEvents";
 import MainBanner from "./MainBanner/MainBanner";
 import SpecialEvent from "./SpecialEvent/SpecialEvent";
 import TopPicks from "./TopPicks/TopPicks";
-import { data } from "../data.js";
 import eventImage1 from "../images/events/whiteParty.jpg";
 import AllCategories from "./Filter/AllCategories.js";
 import Events from "./EventsComponents/Events.js";
