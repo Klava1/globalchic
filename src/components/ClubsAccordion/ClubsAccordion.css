@@ -1,0 +1,107 @@
+/* ClubsAccordion.css */
+
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fafafa;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  padding: 15px 20px;
+  cursor: pointer;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.accordion-header:hover {
+  background-color: #bbdefb;
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.accordion-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 0 0 8px 8px;
+}
+
+.accordion-content p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.accordion-content p strong {
+  color: #333;
+}
+
+.accordion-content a {
+  color: #1e88e5;
+  text-decoration: none;
+}
+
+.accordion-content a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+
+/* iPad */
+@media (max-width: 768px) {
+  .accordion {
+    max-width: 90%;
+  }
+
+  .accordion-header {
+    padding: 12px 15px;
+  }
+
+  .accordion-header h3 {
+    font-size: 1.2em;
+  }
+
+  .accordion-content {
+    padding: 15px;
+  }
+}
+
+/* iPhone */
+@media (max-width: 480px) {
+  .accordion {
+    max-width: 95%;
+  }
+
+  .accordion-header {
+    padding: 10px 12px;
+  }
+
+  .accordion-header h3 {
+    font-size: 1.1em;
+  }
+
+  .accordion-content {
+    padding: 10px;
+  }
+
+  .accordion-content p {
+    font-size: 0.9em;
+  }
+}

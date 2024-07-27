@@ -18,6 +18,8 @@ import OurVacancies from "./components/OurVacancies/OurVacancies";
 import logoGC from "./images/logogc-nobg.png";
 import BToB from "./components/BToB/BToB";
 import Cart from "./components/Cart/Cart";
+import { CountryProvider } from "./Context/CountryContext";
+import ClubsAccordion from "./components/ClubsAccordion/ClubsAccordion";
 // import AddEvent from "./AddEvent";
 
 function AppContent() {
@@ -33,11 +35,19 @@ function AppContent() {
       <Routes>
         <Route
           path="/"
-          element={<FlagGrid />}
+          element={
+            <div>
+              <FlagGrid /> <BToB />
+            </div>
+          }
         />
         <Route
           path="/filtered-events/:country"
-          element={<MainPage />}
+          element={
+            <div>
+              <MainPage /> <ClubsAccordion />
+            </div>
+          }
         />
         <Route
           path="/aboutUs"
@@ -65,9 +75,6 @@ function AppContent() {
         />
         {/* <Route path="/admin" element={<AddEvent />} /> */}
       </Routes>
-
-      <BToB />
-
       <Footer />
     </div>
   );
@@ -75,9 +82,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <CountryProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </CountryProvider>
   );
 }
 

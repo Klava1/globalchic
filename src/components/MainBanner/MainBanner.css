@@ -1,34 +1,75 @@
-.main-banner {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  
-  .main-banner-image {
-    width: 100%;
-    height: auto;
-    max-height: 40vh;
-    object-fit: cover;
-  }
-  
-  .main-banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .main-banner-text h1 {
-    font-size: 3rem;
-    margin: 0;
-    color: white;
+/* Default Styles */
 
+.main-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.main-banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 40vh;
+  object-fit: cover;
+}
+
+.main-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.main-banner-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+
+.main-banner-text p {
+  font-size: 1.5rem;
+  margin: 10px 0 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* iPad */
+@media (max-width: 768px) {
+  .main-banner-image {
+    max-height: 30vh;
   }
-  
+
+  .main-banner-text {
+    padding: 15px;
+  }
+
+  .main-banner-text h1 {
+    font-size: 2.5rem;
+  }
+
   .main-banner-text p {
-    font-size: 1.5rem;
-    margin: 10px 0 0;
+    font-size: 1.2rem;
   }
+}
+
+/* iPhone */
+@media (max-width: 480px) {
+  .main-banner-image {
+    max-height: 25vh;
+  }
+
+  .main-banner-text {
+    padding: 10px;
+  }
+
+  .main-banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .main-banner-text p {
+    font-size: 1rem;
+  }
+}

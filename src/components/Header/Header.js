@@ -2,37 +2,43 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import logoBC from "../../images/logobc.jpg";
 import logoGC from "../../images/logogc-nobg.png";
-
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 function Header(props) {
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const navigate = useNavigate();
   const handleBackToGlobal = () => {
     navigate("/");
   };
+  const toggleDropDown = () => {
+    setIsDropDownOpen(!isDropDownOpen);
+  };
   return (
     <header className="header">
-      <Link
-        to="/"
-        className="logo-link"
-      >
-        <img
-          src={logoGC}
-          className="logoGC"
-          alt="Global Chic Logo"
-          onClick={handleBackToGlobal}
-        />
-      </Link>
-      <Link
-        to="/filtered-events/:country"
-        className="logo-link"
-      >
-        <img
-          src={logoBC}
-          className="logoBC"
-          alt="logoBC"
-        />
-      </Link>
+      <div className="logo-container">
+        <Link
+          to="/"
+          className="logo-link"
+        >
+          <img
+            src={logoGC}
+            className="logoGC"
+            alt="Global Chic Logo"
+            onClick={handleBackToGlobal}
+          />
+        </Link>
+        <Link
+          to="/filtered-events/:country"
+          className="logo-link"
+        >
+          <img
+            src={logoBC}
+            className="logoBC"
+            alt="logoBC"
+          />
+        </Link>
+      </div>
       <nav className="nav">
         <Link
           to="/aboutUs"
@@ -46,13 +52,52 @@ function Header(props) {
         >
           Our Rules
         </Link>
-        <Link
-          to="/membership"
-          className="nav-link"
+        <div
+          className="dropdown-membership"
+          onMouseEnter={toggleDropDown}
+          onMouseLeave={toggleDropDown}
         >
-          Membership
-          {/* ADD DROPDOWN WITH THREE OPTIONS */}
-        </Link>
+          <Link
+            to="/membership"
+            className="nav-link"
+          >
+            Memberships and Partnerships
+          </Link>
+          {isDropDownOpen && (
+            <div className="dropdown-membership-menu">
+              <Link
+                to="/membership/option1"
+                className="dropdown-membership-item"
+              >
+                General Membership
+              </Link>
+              <Link
+                to="/membership/option2"
+                className="dropdown-membership-item"
+              >
+                Member-Partner
+              </Link>
+              <Link
+                to="/membership/option1"
+                className="dropdown-membership-item"
+              >
+                Associate Members
+              </Link>
+              <Link
+                to="/membership/option2"
+                className="dropdown-membership-item"
+              >
+                Ads and Business Partners
+              </Link>
+              <Link
+                to="/membership/option3"
+                className="dropdown-membership-item"
+              >
+                Sponsorship
+              </Link>
+            </div>
+          )}
+        </div>
 
         <Link
           to="/annualEvents"

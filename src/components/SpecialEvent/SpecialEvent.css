@@ -1,69 +1,147 @@
+/* Default Styles */
 
+.special-event {
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  color: #333;
+  background-color: #f4ecdd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.special-event h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #222;
+  font-weight: bold;
+}
+
+.special-event-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.special-event-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.special-event-details {
+  max-width: 450px;
+  text-align: left;
+}
+
+.event-date,
+.event-price {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.event-description {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.buy-now-button {
+  background-color: #da4928;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+  background-color: #e20100;
+}
+
+/* Media Queries for Responsiveness */
+
+/* iPad */
+@media (max-width: 768px) {
   .special-event {
-    padding: 40px 30px;
-    max-width: 1200px;
-    margin: 40px auto;
-    color: #333;
-    background-color: #f4ecdd;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    margin: 30px auto;
+  }
+
+  .special-event h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  .special-event-content {
+    gap: 50px;
+  }
+
+  .special-event-image {
+    max-width: 300px;
+  }
+
+  .special-event-details {
+    max-width: 100%;
     text-align: center;
   }
-  
-  .special-event h2{
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #222;
-    font-weight: bold;
-  }
-  
-  .special-event-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-  }
-  
-  .special-event-image {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .special-event-details {
-    max-width: 450px;
-    text-align: left;
-  }
-  
+
   .event-date,
   .event-price {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .event-description {
     font-size: 1.1em;
-    margin-bottom: 20px;
-    color: #666;
-    line-height: 1.6;
   }
-  
-  .buy-now-button {
-    background-color: #da4928 ;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .event-description {
     font-size: 1em;
-    transition: background-color 0.3s ease;
   }
-  
-  .buy-now-button:hover {
-    background-color: #e20100;
+}
+
+/* iPhone */
+@media (max-width: 480px) {
+  .special-event {
+    padding: 20px 15px;
+    margin: 20px auto;
   }
-  
+
+  .special-event h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .special-event-content {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .special-event-image {
+    max-width: 100%;
+  }
+
+  .special-event-details {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .event-date,
+  .event-price {
+    font-size: 1em;
+  }
+
+  .event-description {
+    font-size: 0.9em;
+  }
+
+  .buy-now-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}

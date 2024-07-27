@@ -1,87 +1,209 @@
+/* TopPicks.css */
+
+/* Default Styles */
+
 .top-picks {
-    padding: 60px 30px;
-    margin: 40px auto;
-    color: #333;
-    background-color: #f4f1eb;
-    border-radius: 10px;
+  padding: 60px 30px;
+  margin: 40px auto;
+  color: #333;
+  background-color: #f4f1eb;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.top-picks h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #222;
+  font-weight: bold;
+}
+
+.top-pick-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-button-previous,
+.nav-button-next {
+  background-color: #da4928;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-button-previous {
+  left: -60px;
+}
+
+.nav-button-next {
+  right: -60px;
+}
+
+.nav-button-previous:hover,
+.nav-button-next:hover {
+  background-color: #e20100;
+}
+
+.top-pick-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.top-pick-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.top-pick-details {
+  max-width: 500px;
+}
+
+.top-pick-details h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.top-pick-details p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.read-more-button {
+  background-color: #587a89;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #384e58;
+}
+
+/* Media Queries for Responsiveness */
+
+/* iPad */
+@media (max-width: 768px) {
+  .top-picks {
+    padding: 40px 20px;
+    margin: 30px auto;
+  }
+
+  .top-picks h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  .top-pick-slider {
+    flex-direction: column;
+  }
+
+  .nav-button-previous,
+  .nav-button-next {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .nav-button-previous {
+    left: -10px;
+  }
+
+  .nav-button-next {
+    right: -10px;
+  }
+
+  .top-pick-image {
+    max-width: 300px;
+  }
+
+  .top-pick-details {
+    max-width: 100%;
     text-align: center;
   }
-  
-  .top-picks h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #222;
-    font-weight: bold;
-  }
-  
-  .top-pick-slider {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .nav-button {
-    background-color: #da4928;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin: 0 10px;
-  }
-  
-  .nav-button:hover {
-    background-color: #e20100;
-  }
-  
-  .top-pick-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    text-align: left;
-  }
-  
-  .top-pick-image {
-    width: 40%;
-    max-width: 500px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .top-pick-details {
-    max-width: 500px;
-  }
-  
+
   .top-pick-details h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: bold;
+    font-size: 1.3em;
   }
-  
+
   .top-pick-details p {
     font-size: 1em;
+  }
+}
+
+/* iPhone */
+@media (max-width: 480px) {
+  .top-picks {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+
+  .top-picks h2 {
+    font-size: 1.8em;
     margin-bottom: 20px;
-    color: #666;
-    line-height: 1.6;
   }
-  
+
+  .top-pick-slider {
+    flex-direction: column;
+  }
+
+  .nav-button-previous,
+  .nav-button-next {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+
+  .nav-button-previous {
+    left: -20px;
+    top: auto;
+  }
+
+  .nav-button-next {
+    right: -20px;
+    top: auto;
+  }
+
+  .top-pick-image {
+    max-width: 200px;
+  }
+
+  .top-pick-details {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .top-pick-details h3 {
+    font-size: 1.1em;
+  }
+
+  .top-pick-details p {
+    font-size: 0.9em;
+  }
+
   .read-more-button {
-    background-color: #587a89 ;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
+    padding: 8px 16px;
+    font-size: 0.9em;
   }
-  
-  .read-more-button:hover {
-    background-color: #384e58 ;
-  }
-  
+}
