@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #e6e6e6;
+  background-color: #d4ccb9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -13,6 +13,6 @@
   padding-left: 40px;
 }
 
-body{
-background-color: #f5e1bf;
+body {
+  background-color: #e2c9a9;
 }

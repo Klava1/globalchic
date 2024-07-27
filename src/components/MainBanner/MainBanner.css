@@ -1,5 +1,4 @@
 /* Default Styles */
-
 .main-banner {
   position: relative;
   text-align: center;
@@ -39,37 +38,56 @@
 /* iPad */
 @media (max-width: 768px) {
   .main-banner-image {
-    max-height: 30vh;
+    max-height: 20vh; /* Further reduce the height */
   }
 
   .main-banner-text {
-    padding: 15px;
+    padding: 10px; /* Reduce padding */
   }
 
   .main-banner-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Smaller font size */
   }
 
   .main-banner-text p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Smaller font size */
+  }
+}
+
+/* iPad Pro */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-banner-image {
+    max-height: 25vh; /* Reduce height for iPad Pro */
+  }
+
+  .main-banner-text {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .main-banner-text h1 {
+    font-size: 2.5rem; /* Slightly larger font size */
+  }
+
+  .main-banner-text p {
+    font-size: 1.2rem; /* Slightly larger font size */
   }
 }
 
 /* iPhone */
 @media (max-width: 480px) {
   .main-banner-image {
-    max-height: 25vh;
+    max-height: 20vh; /* Reduce the height further */
   }
 
   .main-banner-text {
-    padding: 10px;
+    padding: 8px; /* Reduce padding */
   }
 
   .main-banner-text h1 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Smaller font size */
   }
 
   .main-banner-text p {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Smaller font size */
   }
 }

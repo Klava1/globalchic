@@ -171,6 +171,9 @@
     border-radius: 8px; /* Slightly more rounded for touch-friendly design */
     white-space: nowrap;
   }
+  .nav-link-checkout {
+    display: flex;
+  }
 
   .dropdown-membership-menu {
     width: 100%;

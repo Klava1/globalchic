@@ -17,51 +17,54 @@ const ClubsAccordion = () => {
   }
 
   return (
-    <div className="accordion">
-      {Object.keys(countryClubs).map((club, index) => (
-        <div
-          key={club}
-          className="accordion-item"
-        >
+    <div>
+      <div className="accordion-name">
+        Global Chic Clubs in {selectedCountry}
+      </div>
+      <div className="accordion">
+        {Object.keys(countryClubs).map((club, index) => (
           <div
-            className="accordion-header"
-            onClick={() => handleToggle(index)}
+            key={club}
+            className="accordion-item"
           >
-            <h3>
-              {club} in {selectedCountry}
-            </h3>
-          </div>
-          {activeIndex === index && (
-            <div className="accordion-content">
-              <p>
-                <strong>Book/Movie/Event:</strong>{" "}
-                {countryClubs[club].book ||
-                  countryClubs[club].movie ||
-                  countryClubs[club].game ||
-                  countryClubs[club].event ||
-                  countryClubs[club].trail ||
-                  countryClubs[club].route ||
-                  countryClubs[club].exhibit ||
-                  countryClubs[club].topic ||
-                  countryClubs[club].activity}
-              </p>
-              <p>
-                <strong>Next Meeting:</strong> {countryClubs[club].place}
-              </p>
-              <p>
-                <strong>Link:</strong>{" "}
-                <a
-                  href={countryClubs[club].link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {countryClubs[club].link}
-                </a>
-              </p>
+            <div
+              className="accordion-header"
+              onClick={() => handleToggle(index)}
+            >
+              <h3>{club}</h3>
             </div>
-          )}
-        </div>
-      ))}
+            {activeIndex === index && (
+              <div className="accordion-content">
+                <p>
+                  <strong>Book/Movie/Event:</strong>{" "}
+                  {countryClubs[club].book ||
+                    countryClubs[club].movie ||
+                    countryClubs[club].game ||
+                    countryClubs[club].event ||
+                    countryClubs[club].trail ||
+                    countryClubs[club].route ||
+                    countryClubs[club].exhibit ||
+                    countryClubs[club].topic ||
+                    countryClubs[club].activity}
+                </p>
+                <p>
+                  <strong>Next Meeting:</strong> {countryClubs[club].place}
+                </p>
+                <p>
+                  <strong>Link:</strong>{" "}
+                  <a
+                    href={countryClubs[club].link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {countryClubs[club].link}
+                  </a>
+                </p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
