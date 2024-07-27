@@ -1,10 +1,8 @@
-/* TopPicks.css */
-
 /* Default Styles */
 
 .top-picks {
-  padding: 60px 30px;
-  margin: 40px auto;
+  padding: 20px 15px;
+  margin: 20px auto;
   color: #333;
   background-color: #f4f1eb;
   border-radius: 10px;
@@ -12,8 +10,8 @@
 }
 
 .top-picks h2 {
-  font-size: 2.5em;
-  margin-bottom: 40px;
+  font-size: 2em;
+  margin-bottom: 20px;
   color: #222;
   font-weight: bold;
 }
@@ -23,6 +21,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .nav-button-previous,
@@ -41,11 +41,11 @@
 }
 
 .nav-button-previous {
-  left: -60px;
+  left: 10px;
 }
 
 .nav-button-next {
-  right: -60px;
+  right: 10px;
 }
 
 .nav-button-previous:hover,
@@ -57,14 +57,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
-  text-align: left;
+  width: 100%;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .top-pick-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -72,6 +72,7 @@
 
 .top-pick-details {
   max-width: 500px;
+  text-align: left;
 }
 
 .top-pick-details h3 {
@@ -82,7 +83,7 @@
 }
 
 .top-pick-details p {
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 20px;
   color: #666;
   line-height: 1.6;
@@ -91,7 +92,7 @@
 .read-more-button {
   background-color: #587a89;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -108,13 +109,13 @@
 /* iPad */
 @media (max-width: 768px) {
   .top-picks {
-    padding: 40px 20px;
-    margin: 30px auto;
+    padding: 20px 15px;
+    margin: 20px auto;
   }
 
   .top-picks h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
   }
 
   .top-pick-slider {
@@ -127,16 +128,8 @@
     font-size: 0.9em;
   }
 
-  .nav-button-previous {
-    left: -10px;
-  }
-
-  .nav-button-next {
-    right: -10px;
-  }
-
   .top-pick-image {
-    max-width: 300px;
+    max-width: 200px;
   }
 
   .top-pick-details {
@@ -156,13 +149,13 @@
 /* iPhone */
 @media (max-width: 480px) {
   .top-picks {
-    padding: 20px 15px;
-    margin: 20px auto;
+    padding: 10px 5px;
+    margin: 15px auto;
   }
 
   .top-picks h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
+    font-size: 1.6em;
+    margin-bottom: 10px;
   }
 
   .top-pick-slider {
@@ -175,18 +168,8 @@
     font-size: 0.8em;
   }
 
-  .nav-button-previous {
-    left: -20px;
-    top: auto;
-  }
-
-  .nav-button-next {
-    right: -20px;
-    top: auto;
-  }
-
   .top-pick-image {
-    max-width: 200px;
+    max-width: 150px;
   }
 
   .top-pick-details {
@@ -203,7 +186,7 @@
   }
 
   .read-more-button {
-    padding: 8px 16px;
+    padding: 6px 12px;
     font-size: 0.9em;
   }
 }

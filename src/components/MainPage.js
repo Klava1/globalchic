@@ -7,13 +7,16 @@ import eventImage1 from "../images/events/whiteParty.jpg";
 import AllCategories from "./Filter/AllCategories.js";
 import Events from "./EventsComponents/Events.js";
 import Cart from "./Cart/Cart.js";
+import ChangeCountry from "./ChangeCountry/ChangeCountry.js";
 
 function MainPage() {
   return (
     <div>
       <BackToGlobal />
       <MainBanner />
+
       <AllCategories />
+      <ChangeCountry />
       <Events />
       <Cart />
       <SpecialEvent

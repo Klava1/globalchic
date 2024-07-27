@@ -1,12 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./BackToGlobal.css";
+import { useHandleNavigation } from "../../utils/utils";
 
 function BackToGlobal() {
-  const navigate = useNavigate();
-  const handleBackToGlobal = () => {
-    navigate("/");
-  };
+  const { handleBackToGlobal } = useHandleNavigation();
+  console.log(handleBackToGlobal);
 
   return (
     <div className="back-to-global-container">

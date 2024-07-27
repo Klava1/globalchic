@@ -1,19 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import logoBC from "../../images/logobc.jpg";
 import logoGC from "../../images/logogc-nobg.png";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useHandleNavigation, useToggle } from "../../utils/utils";
 
 function Header(props) {
-  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  const navigate = useNavigate();
-  const handleBackToGlobal = () => {
-    navigate("/");
-  };
-  const toggleDropDown = () => {
-    setIsDropDownOpen(!isDropDownOpen);
-  };
+  const { isOpen: isDropDownOpen, toggle: toggleDropDown } = useToggle();
+  const { handleBackToGlobal } = useHandleNavigation();
+
   return (
     <header className="header">
       <div className="logo-container">

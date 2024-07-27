@@ -5,7 +5,7 @@ const CountryContext = createContext();
 export const useCountry = () => useContext(CountryContext);
 
 export const CountryProvider = ({ children }) => {
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState("");
 
   return (
     <CountryContext.Provider value={{ selectedCountry, setSelectedCountry }}>

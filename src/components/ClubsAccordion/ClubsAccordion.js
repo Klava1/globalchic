@@ -5,8 +5,8 @@ import "./ClubsAccordion.css";
 
 const ClubsAccordion = () => {
   const { selectedCountry } = useCountry();
-
   const [activeIndex, setActiveIndex] = useState(null);
+
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };

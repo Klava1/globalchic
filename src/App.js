@@ -20,6 +20,7 @@ import BToB from "./components/BToB/BToB";
 import Cart from "./components/Cart/Cart";
 import { CountryProvider } from "./Context/CountryContext";
 import ClubsAccordion from "./components/ClubsAccordion/ClubsAccordion";
+import ChangeCountry from "./components/ChangeCountry/ChangeCountry";
 // import AddEvent from "./AddEvent";
 
 function AppContent() {
@@ -45,7 +46,8 @@ function AppContent() {
           path="/filtered-events/:country"
           element={
             <div>
-              <MainPage /> <ClubsAccordion />
+              <MainPage /> <ChangeCountry />
+              <ClubsAccordion />
             </div>
           }
         />
